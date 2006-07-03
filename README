@@ -1,0 +1,94 @@
+libgpod
+------------------------------------------
+libgpod is a library meant to abstract access to an iPod content. It
+provides an easy to use API to retrieve the list of files and playlist
+stored on an iPod, to modify them and to save them back to the iPod.
+
+Runtime requirements:
+  cygwin-1.5.20-1
+  glib2-2.10.3-1
+  gtk2-x11-2.8.19-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.20-1
+  autoconf2.5-2.59-3
+  automake1.9-1.9.6-1
+  binutils-20050610-1
+  bison-2.1-1
+  cygport-0.1.92-1
+  flex-2.5.4a-4
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  gtk-doc-1.5-1
+  intltool-0.34.2-1
+  libtool1.5-1.5.22-1
+  make-3.80-1
+  pkg-config-0.20-1
+  sed-4.1.4-1
+
+Canonical website:
+  http://www.gtkpod.org/libgpod.html
+
+Canonical download:
+  http://prdownloads.sourceforge.net/gtkpod/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libgpod-0.3.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libgpod-0.3.2-X.cygport all
+
+This will create:
+  /usr/src/libgpod-0.3.2-X-src.tar.bz2
+  /usr/src/libgpod-0.3.2-X.tar.bz2
+  /usr/src/libgpod0-0.3.2-X.tar.bz2
+  /usr/src/pygpod-0.3.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/include/gpod-1.0/gpod/ipod-device.h
+  /usr/include/gpod-1.0/gpod/itdb.h
+  /usr/lib/libgpod.dll.a
+  /usr/lib/libgpod.la
+  /usr/lib/pkgconfig/libgpod-1.0.pc
+  /usr/share/doc/Cygwin/libgpod-0.3.2.README
+  /usr/share/doc/libgpod-0.3.2/AUTHORS
+  /usr/share/doc/libgpod-0.3.2/COPYING
+  /usr/share/doc/libgpod-0.3.2/ChangeLog
+  /usr/share/doc/libgpod-0.3.2/INSTALL
+  /usr/share/doc/libgpod-0.3.2/README
+  /usr/share/doc/libgpod-0.3.2/TODO
+  /usr/share/locale/de/LC_MESSAGES/libgpod.mo
+  /usr/share/locale/es/LC_MESSAGES/libgpod.mo
+  /usr/share/locale/fr/LC_MESSAGES/libgpod.mo
+  /usr/share/locale/he/LC_MESSAGES/libgpod.mo
+  /usr/share/locale/it/LC_MESSAGES/libgpod.mo
+  /usr/share/locale/ja/LC_MESSAGES/libgpod.mo
+  /usr/share/locale/sv/LC_MESSAGES/libgpod.mo
+
+Files included in the runtime library package:
+
+  /usr/bin/cyggpod-0.dll
+
+Files included in the python bindings package:
+
+  /usr/lib/python2.4/site-packages/_gpod.dll
+  /usr/lib/python2.4/site-packages/_gpod.la
+  /usr/lib/python2.4/site-packages/gpod.py
+
+------------------
+
+Port Notes:
+
+----- version 0.3.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
