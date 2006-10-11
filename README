@@ -5,27 +5,25 @@ provides an easy to use API to retrieve the list of files and playlist
 stored on an iPod, to modify them and to save them back to the iPod.
 
 Runtime requirements:
-  cygwin-1.5.20-1
+  cygwin-1.5.21-2
   glib2-2.10.3-1
-  gtk2-x11-2.8.19-1
+  gtk2-x11-2.8.20-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.20-1
-  autoconf2.5-2.59-3
+  cygwin-1.5.21-2
+  autoconf2.5-2.59-2
   automake1.9-1.9.6-1
-  binutils-20050610-1
-  bison-2.1-1
-  cygport-0.1.92-1
-  flex-2.5.4a-4
+  binutils-20060709-1
+  cygport-0.2.5-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
   gtk-doc-1.5-1
-  intltool-0.34.2-1
+  intltool-0.35.0-1
   libtool1.5-1.5.22-1
-  make-3.80-1
+  make-3.81-1
   pkg-config-0.20-1
-  sed-4.1.4-1
+  sed-4.1.5-1
 
 Canonical website:
   http://www.gtkpod.org/libgpod.html
@@ -50,20 +48,16 @@ This will create:
 
 -------------------------------------------
 
-Files included in the binary package:
+Files included in the binary packages:
 
-  /usr/include/gpod-1.0/gpod/ipod-device.h
-  /usr/include/gpod-1.0/gpod/itdb.h
-  /usr/lib/libgpod.dll.a
-  /usr/lib/libgpod.la
-  /usr/lib/pkgconfig/libgpod-1.0.pc
-  /usr/share/doc/Cygwin/libgpod-0.3.2.README
-  /usr/share/doc/libgpod-0.3.2/AUTHORS
-  /usr/share/doc/libgpod-0.3.2/COPYING
-  /usr/share/doc/libgpod-0.3.2/ChangeLog
-  /usr/share/doc/libgpod-0.3.2/INSTALL
-  /usr/share/doc/libgpod-0.3.2/README
-  /usr/share/doc/libgpod-0.3.2/TODO
+(libgpod)
+  /usr/share/doc/Cygwin/libgpod-0.4.0.README
+  /usr/share/doc/libgpod-0.4.0/AUTHORS
+  /usr/share/doc/libgpod-0.4.0/COPYING
+  /usr/share/doc/libgpod-0.4.0/ChangeLog
+  /usr/share/doc/libgpod-0.4.0/INSTALL
+  /usr/share/doc/libgpod-0.4.0/README
+  /usr/share/doc/libgpod-0.4.0/TODO
   /usr/share/locale/de/LC_MESSAGES/libgpod.mo
   /usr/share/locale/es/LC_MESSAGES/libgpod.mo
   /usr/share/locale/fr/LC_MESSAGES/libgpod.mo
@@ -72,19 +66,47 @@ Files included in the binary package:
   /usr/share/locale/ja/LC_MESSAGES/libgpod.mo
   /usr/share/locale/sv/LC_MESSAGES/libgpod.mo
 
-Files included in the runtime library package:
-
+(libgpod0)
   /usr/bin/cyggpod-0.dll
 
-Files included in the python bindings package:
+(libgpod-devel)
+  /usr/include/gpod-1.0/gpod/itdb.h
+  /usr/lib/libgpod.dll.a
+  /usr/lib/libgpod.la
+  /usr/lib/pkgconfig/libgpod-1.0.pc
+  /usr/share/gtk-doc/html/libgpod/ch01.html
+  /usr/share/gtk-doc/html/libgpod/ch02.html
+  /usr/share/gtk-doc/html/libgpod/home.png
+  /usr/share/gtk-doc/html/libgpod/index.html
+  /usr/share/gtk-doc/html/libgpod/index.sgml
+  /usr/share/gtk-doc/html/libgpod/left.png
+  /usr/share/gtk-doc/html/libgpod/libgpod-Artwork.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-Device.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-File-handling-functions.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-Low-level-functions.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-Playlists.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-The-Itdb-iTunesDB-structure.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-Time-handling.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-Tracks.html
+  /usr/share/gtk-doc/html/libgpod/libgpod.devhelp
+  /usr/share/gtk-doc/html/libgpod/libgpod.devhelp2
+  /usr/share/gtk-doc/html/libgpod/right.png
+  /usr/share/gtk-doc/html/libgpod/style.css
+  /usr/share/gtk-doc/html/libgpod/up.png
 
+(pygpod)
   /usr/lib/python2.4/site-packages/_gpod.dll
   /usr/lib/python2.4/site-packages/_gpod.la
   /usr/lib/python2.4/site-packages/gpod.py
+  /usr/lib/python2.4/site-packages/gpod.pyc
+  /usr/lib/python2.4/site-packages/gpod.pyo
 
 ------------------
 
 Port Notes:
+
+----- version 0.4.0-1 -----
+Version bump.
 
 ----- version 0.3.2-1 -----
 Initial release for Cygwin.
