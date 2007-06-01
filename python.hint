@@ -1,5 +1,5 @@
 category: Gnome Audio Python
-requires: cygwin libgpod0 python eyed3
+requires: cygwin libgpod1 python python-eyed3
 external-source: libgpod
 sdesc: "iPod access library (Python bindings)"
 ldesc: "libgpod is a library meant to abstract access to an iPod content. It
