@@ -6,12 +6,12 @@ stored on an iPod, to modify them and to save them back to the iPod.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  gdk-pixbuf2-2.10.12-1
-  glib2-2.12.12-1
+  gdk-pixbuf2-2.10.13-1
+  glib2-2.12.12-2
   libintl8-0.15-1
 (python-gpod)
-  python-2.5.1-1
-  python-eyed3-0.6.14-1
+  python-2.5.1-3
+  python-mutagen-1.11-1
 
 Build requirements:
 (besides corresponding -devel packages)
@@ -39,30 +39,29 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libgpod-0.4.2-X-src.tar.bz2
+  unpack libgpod-0.5.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libgpod-0.4.2-X.cygport all
+  cygport ./libgpod-0.5.2-X.cygport all
 
 This will create:
-  /usr/src/libgpod-0.4.2-X-src.tar.bz2
-  /usr/src/libgpod-0.4.2-X.tar.bz2
-  /usr/src/libgpod1-0.4.2-X.tar.bz2
-  /usr/src/python-gpod-0.4.2-X.tar.bz2
+  /usr/src/libgpod-0.5.2-X-src.tar.bz2
+  /usr/src/libgpod-0.5.2-X.tar.bz2
+  /usr/src/libgpod2-0.5.2-X.tar.bz2
+  /usr/src/python-gpod-0.5.2-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (libgpod)
-  /usr/share/doc/Cygwin/libgpod-0.4.0.README
-  /usr/share/doc/libgpod-0.4.0/AUTHORS
-  /usr/share/doc/libgpod-0.4.0/COPYING
-  /usr/share/doc/libgpod-0.4.0/ChangeLog
-  /usr/share/doc/libgpod-0.4.0/INSTALL
-  /usr/share/doc/libgpod-0.4.0/README
-  /usr/share/doc/libgpod-0.4.0/TODO
+  /usr/share/doc/Cygwin/libgpod-0.5.2.README
+  /usr/share/doc/libgpod-0.5.2/AUTHORS
+  /usr/share/doc/libgpod-0.5.2/COPYING
+  /usr/share/doc/libgpod-0.5.2/ChangeLog
+  /usr/share/doc/libgpod-0.5.2/INSTALL
+  /usr/share/doc/libgpod-0.5.2/README
   /usr/share/locale/de/LC_MESSAGES/libgpod.mo
   /usr/share/locale/es/LC_MESSAGES/libgpod.mo
   /usr/share/locale/fr/LC_MESSAGES/libgpod.mo
@@ -71,8 +70,8 @@ Files included in the binary packages:
   /usr/share/locale/ja/LC_MESSAGES/libgpod.mo
   /usr/share/locale/sv/LC_MESSAGES/libgpod.mo
 
-(libgpod1)
-  /usr/bin/cyggpod-1.dll
+(libgpod2)
+  /usr/bin/cyggpod-2.dll
 
 (libgpod-devel)
   /usr/include/gpod-1.0/gpod/itdb.h
@@ -80,21 +79,24 @@ Files included in the binary packages:
   /usr/lib/libgpod.la
   /usr/lib/pkgconfig/libgpod-1.0.pc
   /usr/share/gtk-doc/html/libgpod/ch01.html
-  /usr/share/gtk-doc/html/libgpod/ch02.html
   /usr/share/gtk-doc/html/libgpod/home.png
   /usr/share/gtk-doc/html/libgpod/index.html
   /usr/share/gtk-doc/html/libgpod/index.sgml
+  /usr/share/gtk-doc/html/libgpod/itunesdb.html
   /usr/share/gtk-doc/html/libgpod/left.png
   /usr/share/gtk-doc/html/libgpod/libgpod-Artwork.html
   /usr/share/gtk-doc/html/libgpod/libgpod-Device.html
   /usr/share/gtk-doc/html/libgpod/libgpod-File-handling-functions.html
   /usr/share/gtk-doc/html/libgpod/libgpod-Low-level-functions.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-Photo-database.html
   /usr/share/gtk-doc/html/libgpod/libgpod-Playlists.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-Smart-Playlists.html
   /usr/share/gtk-doc/html/libgpod/libgpod-The-Itdb-iTunesDB-structure.html
   /usr/share/gtk-doc/html/libgpod/libgpod-Time-handling.html
   /usr/share/gtk-doc/html/libgpod/libgpod-Tracks.html
   /usr/share/gtk-doc/html/libgpod/libgpod.devhelp
   /usr/share/gtk-doc/html/libgpod/libgpod.devhelp2
+  /usr/share/gtk-doc/html/libgpod/photodb.html
   /usr/share/gtk-doc/html/libgpod/right.png
   /usr/share/gtk-doc/html/libgpod/style.css
   /usr/share/gtk-doc/html/libgpod/up.png
@@ -118,6 +120,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.5.2-1 -----
+ABI/version bump.
 
 ----- version 0.4.2-1 -----
 ABI/version bump.
