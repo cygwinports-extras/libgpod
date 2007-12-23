@@ -1,5 +1,5 @@
 category: Gnome Audio
-requires: cygwin libgpod2 libgpod-devel
+requires: cygwin libgpod3 libgpod-devel
 sdesc: "iPod access library (data)"
 ldesc: "libgpod is a library meant to abstract access to an iPod content. It
 provides an easy to use API to retrieve the list of files and playlist

@@ -1,5 +1,5 @@
 category: Gnome Audio
-requires: cygwin libgpod2 glib2-devel gtk2-x11-devel
+requires: cygwin libgpod3 glib2-devel gtk2-x11-devel
 external-source: libgpod
 sdesc: "iPod access library (development)"
 ldesc: "libgpod is a library meant to abstract access to an iPod content. It
