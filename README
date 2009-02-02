@@ -39,29 +39,33 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libgpod-0.6.0-X-src.tar.bz2
+  unpack libgpod-0.7.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libgpod-0.6.0-X.cygport all
+  cygport ./libgpod-0.7.0-X.cygport all
 
 This will create:
-  /usr/src/libgpod-0.6.0-X-src.tar.bz2
-  /usr/src/libgpod-0.6.0-X.tar.bz2
-  /usr/src/libgpod3-0.6.0-X.tar.bz2
-  /usr/src/python-gpod-0.6.0-X.tar.bz2
+  /usr/src/libgpod-0.7.0-X-src.tar.bz2
+  /usr/src/libgpod-common-0.7.0-X.tar.bz2
+  /usr/src/libgpod-devel-0.7.0-X.tar.bz2
+  /usr/src/libgpod4-0.7.0-X.tar.bz2
+  /usr/src/python-gpod-0.7.0-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
-(libgpod)
-  /usr/share/doc/Cygwin/libgpod-0.6.0.README
-  /usr/share/doc/libgpod-0.6.0/AUTHORS
-  /usr/share/doc/libgpod-0.6.0/COPYING
-  /usr/share/doc/libgpod-0.6.0/ChangeLog
-  /usr/share/doc/libgpod-0.6.0/INSTALL
-  /usr/share/doc/libgpod-0.6.0/README
+(libgpod4)
+  /usr/bin/cyggpod-4.dll
+
+(libgpod-common)
+  /usr/share/doc/libgpod-0.7.0/AUTHORS
+  /usr/share/doc/libgpod-0.7.0/COPYING
+  /usr/share/doc/libgpod-0.7.0/ChangeLog
+  /usr/share/doc/libgpod-0.7.0/INSTALL
+  /usr/share/doc/libgpod-0.7.0/NEWS
+  /usr/share/doc/libgpod-0.7.0/README
   /usr/share/locale/de/LC_MESSAGES/libgpod.mo
   /usr/share/locale/es/LC_MESSAGES/libgpod.mo
   /usr/share/locale/fr/LC_MESSAGES/libgpod.mo
@@ -70,9 +74,7 @@ Files included in the binary packages:
   /usr/share/locale/ja/LC_MESSAGES/libgpod.mo
   /usr/share/locale/ro/LC_MESSAGES/libgpod.mo
   /usr/share/locale/sv/LC_MESSAGES/libgpod.mo
-
-(libgpod3)
-  /usr/bin/cyggpod-3.dll
+  /usr/share/locale/zh_CN/LC_MESSAGES/libgpod.mo
 
 (libgpod-devel)
   /usr/include/gpod-1.0/gpod/itdb.h
@@ -86,6 +88,7 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/libgpod/itunesdb.html
   /usr/share/gtk-doc/html/libgpod/left.png
   /usr/share/gtk-doc/html/libgpod/libgpod-Artwork.html
+  /usr/share/gtk-doc/html/libgpod/libgpod-Chapter-Data.html
   /usr/share/gtk-doc/html/libgpod/libgpod-Device.html
   /usr/share/gtk-doc/html/libgpod/libgpod-File-handling-functions.html
   /usr/share/gtk-doc/html/libgpod/libgpod-Low-level-functions.html
@@ -121,6 +124,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.7.0-1 -----
+ABI/version bump.
 
 ----- version 0.6.0-1 -----
 ABI/version bump.

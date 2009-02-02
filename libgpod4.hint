@@ -1,0 +1,7 @@
+category: Gnome Audio
+requires: cygwin libgpod-common libgdk_pixbuf2.0_0 libglib2.0_0 libintl8
+external-source: libgpod
+sdesc: "iPod access library (runtime)"
+ldesc: "libgpod is a library meant to abstract access to an iPod content. It
+provides an easy to use API to retrieve the list of files and playlist
+stored on an iPod, to modify them and to save them back to the iPod."
