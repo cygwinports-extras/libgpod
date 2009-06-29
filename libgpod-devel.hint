@@ -1,5 +1,5 @@
 category: Gnome Audio
-requires: cygwin libgpod4 libglib2.0-devel libgdk_pixbuf2.0-devel gettext
+requires: libgpod4 libglib2.0-devel libgdk_pixbuf2.0-devel gettext
 external-source: libgpod
 sdesc: "iPod access library (development)"
 ldesc: "libgpod is a library meant to abstract access to an iPod content. It
