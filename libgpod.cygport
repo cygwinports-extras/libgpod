@@ -1,0 +1,22 @@
+inherit gnome2 python
+
+NAME="libgpod"
+VERSION=0.7.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="iPod access library"
+DESCRIPTION="libgpod is a library meant to abstract access to an iPod content.
+It provides an easy to use API to retrieve the list of files and playlist
+stored on an iPod, to modify them and to save them back to the iPod."
+HOMEPAGE="http://www.gtkpod.org/"
+SRC_URI="mirror://sourceforge/gtkpod/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="0.6.0-no-undefined.patch"
+
+PKG_NAMES="${NAME}4 ${NAME}-common ${NAME}-devel python-gpod"
+libgpod4_REQUIRES="libgpod-common"
+libgpod4_CONTENTS="usr/bin/cyggpod-4.dll"
+libgpod_common_CONTENTS='--exclude=gtk-doc usr/share/'
+libgpod_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/'
+python_gpod_CONTENTS="${PYTHON_SITELIB#/}"
+
+DIFF_EXCLUDES="gpod.py gpod_wrap.c"
