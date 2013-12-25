@@ -1,0 +1,18 @@
+--- origsrc/libgpod-0.8.3/bindings/mono/libgpod-sharp/Makefile.am	2013-07-09 04:37:38.000000000 -0500
++++ src/libgpod-0.8.3/bindings/mono/libgpod-sharp/Makefile.am	2013-12-24 15:23:51.505267200 -0600
+@@ -22,12 +22,13 @@ dlname := $(shell grep "^dlname=" $(top_
+ libgpod-sharp.dll.config: $(top_srcdir)/bindings/mono/libgpod-sharp/libgpod-sharp.dll.config.in 
+ 	sed "s/@DLNAME@/$(dlname)/g" $< >$@
+ 
+-pkgconfigdir = $(libdir)/pkgconfig
+-pkgconfig_DATA = libgpod-sharp.pc
+ EXTRAS = \
+ 	libgpod-sharp.pc.in
+ 
+ if HAVE_MONO
++pkgconfigdir = $(libdir)/pkgconfig
++pkgconfig_DATA = libgpod-sharp.pc
++
+ include $(srcdir)/../Makefile.include
+ module_SCRIPTS += libgpod-sharp.dll.config
+ EXTRA_DIST += libgpod-sharp.dll.config.in

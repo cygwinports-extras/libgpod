@@ -1,0 +1,13 @@
+--- origsrc/libgpod-0.8.3/bindings/python/Makefile.am	2011-04-15 03:37:34.000000000 -0500
++++ src/libgpod-0.8.3/bindings/python/Makefile.am	2013-12-24 15:16:20.901494100 -0600
+@@ -41,8 +41,8 @@ nodist_gpod_PYTHON = gpod.py
+ gpod_LTLIBRARIES = _gpod.la
+ nodist__gpod_la_SOURCES = gpod_wrap.c
+ _gpod_la_CPPFLAGS = $(PYTHON_INCLUDES) $(LIBGPOD_CFLAGS) $(PYGOBJECT_CFLAGS) $(INCLUDES)
+-_gpod_la_LDFLAGS = -module -avoid-version -shared
+-_gpod_la_LIBADD = $(LIBGPOD_LIBS) $(PYGOBJECT_LIBS) $(top_builddir)/src/libgpod.la
++_gpod_la_LDFLAGS = -module -avoid-version -shared -no-undefined
++_gpod_la_LIBADD = $(LIBGPOD_LIBS) $(PYGOBJECT_LIBS) $(top_builddir)/src/libgpod.la -lpython$(PYTHON_VERSION)
+ 
+ gpod_doc.i: $(srcdir)/gpod_doc.i.in $(srcdir)/gtkdoc-to-swig.xsl
+ 	cat $< > $@

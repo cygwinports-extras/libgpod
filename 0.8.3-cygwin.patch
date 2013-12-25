@@ -1,0 +1,28 @@
+--- origsrc/libgpod-0.8.3/tools/generic-callout.c	2013-07-10 08:43:42.000000000 -0500
++++ src/libgpod-0.8.3/tools/generic-callout.c	2013-12-24 15:15:40.044157200 -0600
+@@ -605,7 +605,11 @@ static char *mount_ipod (const char *dev
+                 return NULL;
+         }
+         g_assert (tmpname == filename);
++#ifdef __CYGWIN__
++        result = mount (dev_path, tmpname, MOUNT_BIND);
++#else
+         result = mount (dev_path, tmpname, fstype, 0, NULL);
++#endif
+         if (result != 0) {
+                 g_debug("failed to mount device %s at %s: %s",
+                         dev_path, tmpname, strerror(errno));
+--- origsrc/libgpod-0.8.3/tools/ipod-scsi.c	2011-04-15 03:37:34.000000000 -0500
++++ src/libgpod-0.8.3/tools/ipod-scsi.c	2013-12-24 15:10:46.133346500 -0600
+@@ -152,7 +152,11 @@ G_GNUC_INTERNAL void sync_time (const ch
+     /* the timezone value is the shift east of UTC in 15 min chunks
+      * so eg. UTC+2 is 2*4 = 8
+      */
++#ifdef __CYGWIN__
++    ipod_time.timezone = -timezone + daylight;
++#else
+     ipod_time.timezone = tm->tm_gmtoff / 900;
++#endif
+     ipod_time.hour = tm->tm_hour;
+     ipod_time.minute = tm->tm_min;
+     ipod_time.second = tm->tm_sec;
